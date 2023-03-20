@@ -5,4 +5,8 @@ class RestaurantPolicy < ApplicationPolicy
       scope.all # to retrieve all as normal in Index
     end
   end
+
+  def show?
+    true
+  end
 end
