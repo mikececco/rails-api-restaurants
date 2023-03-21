@@ -19,4 +19,8 @@ class RestaurantPolicy < ApplicationPolicy
     # any logged in user - not disabled maybe? based on business
     !user.nil?
   end
+
+  def destroy?
+    update?
+  end
 end
