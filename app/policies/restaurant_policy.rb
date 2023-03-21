@@ -14,4 +14,9 @@ class RestaurantPolicy < ApplicationPolicy
     # is record (restaurant) owner the current user? if so update allowed
     record.user == user
   end
+
+  def create?
+    # any logged in user - not disabled maybe? based on business
+    !user.nil?
+  end
 end
